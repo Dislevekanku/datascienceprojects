@@ -15,8 +15,8 @@ This project implements a simple language model using Flask and NLTK (Natural La
 
 # Usage:
 
-Clone the repository.
-Install the required dependencies listed in the requirements.txt file.
-Run the Flask server using python app.py.
-Access the web interface at http://localhost:5000 in your browser.
-Enter a prefix, specify the desired length of the generated sentence, and choose the n-gram model to generate text and view perplexity metrics.
+<br>Clone the repository.</br>
+<br>Install the required dependencies listed in the requirements.txt file.</br>
+<br>Run the Flask server using python app.py.</br>
+<br>Access the web interface at http://localhost:5000 in your browser.</br>
+<br>Enter a prefix, specify the desired length of the generated sentence, and choose the n-gram model to generate text and view perplexity metrics.</br>
