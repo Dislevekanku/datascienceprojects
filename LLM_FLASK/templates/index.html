@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>N-gram Language Model</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.3/css/bulma.min.css">
+    <style>
+        body {
+            padding: 20px;
+        }
+        .hero {
+            background: linear-gradient(to right, #6a11cb, #2575fc);
+            color: white;
+        }
+        .box {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <section class="hero">
+        <div class="hero-body">
+            <div class="container">
+                <h1 class="title">
+                    N-gram Language Model
+                </h1>
+                <h2 class="subtitle">
+                    Enter a prefix and get word completions up to a specified length.
+                </h2>
+            </div>
+        </div>
+    </section>
+    <section class="section">
+        <div class="container">
+            <div class="box">
+                <div class="field">
+                    <label class="label">Prefix</label>
+                    <div class="control">
+                        <input id="prefix" class="input" type="text" placeholder="Enter prefix">
+                    </div>
+                </div>
+                <div class="field">
+                    <label class="label">Length</label>
+                    <div class="control">
+                        <input id="length" class="input" type="number" placeholder="Enter length">
+                    </div>
+                </div>
+                <div class="field">
+                    <label class="label">N-gram model</label>
+                    <div class="control">
+                        <div class="select">
+                            <select id="ngram">
+                                <option value="2">Bigram</option>
+                                <option value="3">Trigram</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="control">
+                    <button id="generate" class="button is-primary">Generate</button>
+                </div>
+                <div class="field">
+                    <label class="label">Generated Sentence</label>
+                    <div class="control">
+                        <textarea id="result" class="textarea" readonly></textarea>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('#generate').click(function() {
+                const prefix = $('#prefix').val();
+                const length = $('#length').val();
+                const n = $('#ngram').val();
+
+                $.ajax({
+                    url: '/generate',
+                    type: 'POST',
+                    contentType: 'application/json',
+                    data: JSON.stringify({ prefix: prefix, length: length, n: n }),
+                    success: function(response) {
+                        $('#result').val(response.sentence);
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
