@@ -23,7 +23,6 @@ def preprocess_text(text):
 
 # Preprocess the corpus
 cleaned_corpus = preprocess_text(corpus)
-
 # Tokenize the text
 tokens = word_tokenize(cleaned_corpus)
 
