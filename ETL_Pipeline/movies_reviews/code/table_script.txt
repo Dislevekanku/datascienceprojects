@@ -1,0 +1,40 @@
+CREATE OR REPLACE DATABASE netflix_data;
+CREATE OR REPLACE SCHEMA netflix_schema;
+
+
+CREATE OR REPLACE TABLE netflix_schema.movies_shows (
+    show_id STRING,           -- Unique ID for the show/movie
+    type STRING,              -- Type of content (e.g., Movie, TV Show)
+    title STRING,             -- Title of the show/movie
+    director STRING,         -- Director(s) of the show/movie
+    cast STRING,              -- Cast of the show/movie
+    country STRING,           -- Country of origin
+    date_added STRING,          -- Date when the movie/show was added to Netflix
+    release_year STRING,         -- Year of release
+    rating STRING,            -- Content rating (e.g., PG-13, R, etc.)
+    duration STRING,          -- Duration of the show/movie (e.g., '90 min')
+    listed_in STRING,         -- Genre or category
+    description STRING       -- Description of the show/movie
+);
+
+CREATE OR REPLACE FILE FORMAT netflix_csv_format
+  TYPE = 'CSV'
+  FIELD_OPTIONALLY_ENCLOSED_BY = '"'
+  SKIP_HEADER = 1
+  DATE_FORMAT = 'MMMM DD, YYYY';  -- This tells Snowflake how to interpret '25-Sep-21'
+
+COPY INTO netflix_schema.movies_shows
+FROM @NETFLIXSTAGE/netflix_titles.csv
+FILE_FORMAT = netflix_csv_format
+ON_ERROR = 'CONTINUE';
+
+SELECT * FROM netflix_schema.movies_shows;
+
+CREATE OR REPLACE VIEW netflix_schema.movies_shows_transformed AS
+SELECT 
+    *
+FROM 
+    netflix_schema.movies_shows;
+
+
+select * from netflix_schema.movies_shows_transformed;
