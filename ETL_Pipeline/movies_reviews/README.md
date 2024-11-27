@@ -87,7 +87,7 @@ The complete pipeline used for this project has been exported from StreamSets an
 
 ### File Details
 
-- **Pipeline Export File**: [`netflix_pipeline.json`](https://github.com/Dislevekanku/datascienceprojects/blob/master/ETL_Pipeline/movies_reviews/code/customerpipelinea0bf5391-62ee-4348-be9e-5b6ec41b9e5e_9eb54357-ab74-11ef-a409-83d6150da07b.json)
+- **Pipeline Export File**: [`netflix_pipeline.json`](https://github.com/Dislevekanku/datascienceprojects/blob/master/ETL_Pipeline/movies_reviews/code/tya0bf5391-62ee-4348-be9e-5b6ec41b9e5e_9eb54357-ab74-11ef-a409-83d6150da07b.json)
   - Contains the fully configured pipeline, including:
     - **Data Origin**: CSV file reader.
     - **Transformations**: Field mapping, date formatting, and data enrichment.
