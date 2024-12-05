@@ -1,0 +1,10 @@
+streamlit
+pandas
+spacy
+scikit-learn
+wordcloud
+matplotlib
+PyPDF2
+python-docx
+beautifulsoup4
+requests
