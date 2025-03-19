@@ -14,9 +14,7 @@ The News Explorer Hub lets you:
 
 This project aligns with Day 3 of the AI Toolbox Adventure, showcasing Gemini’s "multi-tasking magic" and the theory that AI combines data from many sources to respond.
 
-## 🚀 Live Demo
 
-Try the app live on Streamlit Community Cloud: [Insert your Streamlit app URL here, e.g., https://news-explorer-hub.streamlit.app]
 
 ## 🛠️ Setup Instructions
 
