@@ -1,0 +1,20 @@
+# Python cache directories
+__pycache__/
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Virtual environment
+venv/
+
+# Data files
+*.csv
+*.tsv
+*.data
+*.dat
+
+# Docker artifacts
+Dockerfile
+docker-compose.yml
+*.docker
+*.img
