@@ -1,0 +1,15 @@
+# Exclude virtual environments and Python cache
+venv
+.venv
+__pycache__
+*.pyc
+*.pyo
+*.pyd
+
+# Git and Docker files
+.git
+.gitignore
+.dockerignore
+
+# Jupyter checkpoints
+.ipynb_checkpoints
