@@ -17,6 +17,27 @@ Alternatively, you can automate the above steps with:
 make install
 ```
 
+After setting up the environment, install the pre-commit hooks:
+
+```bash
+pre-commit install
+```
+
+## Contributing
+
+### Branch Naming
+- Use descriptive branch names prefixed with `feature/`, `fix/`, or `docs/`.
+- Separate words with hyphens, e.g., `feature/add-model-evaluation`.
+
+### Commit Messages
+- Use the imperative mood in the subject line.
+- Keep the subject line under 50 characters.
+
+### Pull Requests
+- Open PRs against the `main` branch.
+- Ensure all checks pass and request at least one review.
+- Address review feedback promptly.
+
 ## Docker
 
 Build the image:
