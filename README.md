@@ -62,3 +62,5 @@ This starts a Jupyter Notebook server at http://localhost:8888.
 
 
   [Building a Simple Language Model with Flask and NLTK](https://github.com/Dislevekanku/datascienceprojects/tree/master/LLM_FLASK) This repository details the implementation, testing, and evaluation of a simple n-gram language model using the NLTK library. The model is designed to predict the next word in a sentence based on the preceding words, using n-gram statistics. We explored both bigram (n=2) and trigram (n=3) models to compare their performance.
+
+  [Synthetic Oncology Data:](synthetic_oncology/README.md) Generate de-identified cancer patient records with Synthea and matching VCF variant profiles.
